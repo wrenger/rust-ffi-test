@@ -1,0 +1,10 @@
+[package]
+name = "rust-ffi-test"
+version = "0.1.0"
+authors = ["Lars Wrenger <lars@wrenger.net>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bindgen = "0.58.1"
