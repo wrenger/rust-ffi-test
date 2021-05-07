@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set lib paths
-      if: ${{ matrix.os == "windows.latest" }}
+      if: matrix.os == 'windows-latest'
       run: $env:Path += ";C:\\msys64\\mingw64\\bin\\"
     - name: Run
       run: cargo run --verbose
