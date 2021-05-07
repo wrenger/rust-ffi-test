@@ -18,7 +18,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup path
       if: matrix.os == 'windows-latest'
-      run: setx /m PATH "C:\msys64\mingw64\bin;$env:Path"
+      run: |
+        pwd
+        ls C:\msys64\mingw64\bin
+        setx /m PATH "C:\msys64\mingw64\bin;$env:Path"
     - name: Run
       run: |
         echo $PATH
