@@ -20,4 +20,7 @@ jobs:
       if: matrix.os == 'windows-latest'
       run: setx /m PATH "C:\msys64\mingw64\bin;$env:Path"
     - name: Run
-      run: cargo run --verbose
+      run: |
+        echo $PATH
+        cargo run
+      shell: bash
